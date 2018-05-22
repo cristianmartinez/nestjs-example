@@ -1,0 +1,22 @@
+{
+  "name": "medellinjs",
+  "version": "1.0.0",
+  "author": "Cristian Martinez <dev.cmartinez@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "format": "prettier --write \"**/*.ts\"",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{ts,json,md}": ["prettier --write", "git add"]
+  },
+  "devDependencies": {
+    "lerna": "^2.11.0",
+    "prettier": "^1.11.1",
+    "typescript": "^2.6.2"
+  },
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+        "baseUrl": "./packages",
+        "outDir": "./dist",
+        "paths": {
+            "@medellinjs/*": ["./*"]
+        }
+    }
+}
