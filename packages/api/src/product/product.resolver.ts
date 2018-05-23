@@ -15,4 +15,9 @@ export class ProductResolver {
   async products() {
     return await this.productService.getAllProducts().toPromise();
   }
+
+  @Query()
+  async bestProducts() {
+    return await this.productService.getBestProducts().toPromise();
+  }
 }
