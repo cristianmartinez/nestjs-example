@@ -14,7 +14,7 @@ export class ProductService {
       .pipe(map((products: any) => products.map(this.prepareProduct)));
   }
 
-  getAllProductById(productId: string): Observable<ProductModel> {
+  getProductById(productId: string): Observable<ProductModel> {
     return this.productRepository
       .getProductById(productId)
       .pipe(map(this.prepareProduct));
