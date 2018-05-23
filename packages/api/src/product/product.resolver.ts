@@ -1,6 +1,5 @@
-import {Resolver, Query} from "@nestjs/graphql";
-import {ProductService} from "@medellinjs/core";
-
+import { Resolver, Query } from '@nestjs/graphql';
+import { ProductService } from '@medellinjs/core';
 
 @Resolver('Product')
 export class ProductResolver {

@@ -6,6 +6,6 @@ import { ProductResolver } from './product.resolver';
 @Module({
   imports: [CoreModule],
   controllers: [ProductController],
-  providers: [ProductResolver]
+  providers: [ProductResolver],
 })
 export class ProductModule {}

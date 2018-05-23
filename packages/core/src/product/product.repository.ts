@@ -12,7 +12,9 @@ const products: ProductModel[] = [
 export abstract class ProductRepositoryContract {
   abstract getAllProducts(): Observable<ProductModel[]>;
   abstract getProductById(productId: string): Observable<ProductModel>;
-  abstract getProductsWhere(predicate: (product: ProductModel) => boolean): Observable<ProductModel[]>;
+  abstract getProductsWhere(
+    predicate: (product: ProductModel) => boolean,
+  ): Observable<ProductModel[]>;
 }
 
 @Repository()
@@ -25,7 +27,9 @@ export class ProductRepository implements ProductRepositoryContract {
     return of(products.find(product => product.id === productId));
   }
 
-  getProductsWhere(predicate: (product: ProductModel) => boolean) : Observable<ProductModel[]> {
+  getProductsWhere(
+    predicate: (product: ProductModel) => boolean,
+  ): Observable<ProductModel[]> {
     return of(products.filter(predicate));
   }
 }

@@ -4,7 +4,6 @@ import { GraphQLModule, GraphQLFactory } from '@nestjs/graphql';
 import { CoreModule } from './core';
 import { ProductModule } from './product/product.module';
 
-
 @Module({
   imports: [CoreModule, ProductModule, GraphQLModule],
 })

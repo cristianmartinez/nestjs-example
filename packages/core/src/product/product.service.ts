@@ -21,7 +21,9 @@ export class ProductService {
   }
 
   getBestProducts(): Observable<ProductModel[]> {
-    return this.productRepository.getProductsWhere(((product: ProductModel) => product.rate > 5));
+    return this.productRepository.getProductsWhere(
+      (product: ProductModel) => product.rate > 5,
+    );
   }
 
   private prepareProduct(product: ProductModel): ProductModel {
